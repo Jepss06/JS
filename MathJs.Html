@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="coba">
+    </div>
+    <div id="coba1">
+    </div>
+    <div id="coba2">
+    </div>
+    <div id="coba3">
+    </div>
+    <div id="coba4">
+    </div>
+    <div id="coba5">
+    </div>
+    <div id="coba6">
+    </div>
+    <div id="coba7">
+    </div>
+    <div id="phi">
+    </div>
+    <div id="sin">
+    </div>
+    <div id="cos">
+    </div>
+    <div id="min">
+    </div>
+    <div id="max">
+    </div>
+    <div id="acak">
+    </div>
+    <div id="log">
+    </div>
+    <div id="log2">
+    </div>
+    <script>
+        document.getElementById("coba").innerHTML = "bilangan bulat dari 4,7 adalah " + Math.round(
+            4.7) //membulatkan(integer) bilangan real
+        document.getElementById("coba1").innerHTML = "bilangan bulat kebawah dari 4,7 adalah " + Math.floor(
+            4.7) //membulatkan(integer) bilangan real kebawah
+        document.getElementById("coba2").innerHTML = "bilangan bulat keatas dari 4,3 adalah " + Math.ceil(
+            4.3) //membulatkan(integer) bilangan real keatas
+        document.getElementById("coba3").innerHTML = "koma tidak di anggap dari 4,7 adalah " + Math.trunc(4.7)
+        document.getElementById("coba4").innerHTML = "cek angka apakah negatif, positif atau kosong " + Math.sign(2)
+        document.getElementById("coba5").innerHTML = "fungsi pow untuk perpangkatan " + Math.pow(4, 2)
+        document.getElementById("coba6").innerHTML = "fungsi sqrt untuk perpangkatan namun sebaliknya " + Math.sqrt(25)
+        document.getElementById("coba7").innerHTML = "fungsi abs untuk bilangan asli " + Math.abs(-25)
+        document.getElementById("phi").innerHTML = "angka phi " + Math.PI;
+        document.getElementById("sin").innerHTML = "menghitung sin " + Math.sin(90 * Math.PI / 180);
+        document.getElementById("cos").innerHTML = "menghitung cos " + Math.cos(0 * Math.PI / 180);
+        document.getElementById("min").innerHTML = "mencari nilai terkecil " + Math.min(7, 77, 777, 707, 770, 700);
+        document.getElementById("max").innerHTML = "mencari nilai terbesar " + Math.max(7, 77, 777, 707, 770, 700);
+        document.getElementById("acak").innerHTML = "mencari nilai acak " + Math.random();
+        document.getElementById("log").innerHTML = "menghitung logaritma " + Math.log(10);
+        document.getElementById("log2").innerHTML = "angka 10 perlu 3 kali mengulang untuk mendapatkan nilai 1000 = " +
+            Math.log10(1000);
+    </script>
+</body>
+
+</html>

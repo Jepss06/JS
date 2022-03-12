@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // function katakanHallo(name) {
+      //     alert(`hello ${this.name}`)
+      // }
+      // const orang = {
+      //     name: "jeps",
+      //     // katakanHallo: function (name) {
+      //     //     alert(`hello ${this.name}`)
+      //     // }
+      //     katakanHallo: katakanHallo
+      // };
+
+      const orang = {
+        name: "orang",
+      };
+
+      orang.katakanHallo = function (name) {
+        alert(`hello ${name}`);
+      };
+
+      orang.katakanHallo(orang.name);
+
+      const person = {
+        nama: "jeps",
+        katakan: function (name) {
+          console.log(`hello ${name} my name is ${this.nama}`);
+        },
+      };
+      person.katakan("jeps");
+    </script>
+  </body>
+</html>

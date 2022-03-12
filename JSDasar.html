@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const nilai = 60;
+        const congrats = nilai > 50 ? "selamat anda lulus" : "anda gagal";
+        console.log(congrats)
+        // if(name ===  undefined || name === null){kondisi = "nilai default"}
+        let name;
+        kondisi = name??"nilai default"
+        console.log(kondisi)
+        //if (orang.alamat != undefined && orang.alamat!=null){negara = orang.alamat.negara}_
+        let orang = {
+            alamat: {
+                negara: "indonesia"
+            },
+            umur: 80
+        };
+        kondisi2 = orang?.alamat?.negara;
+        document.write(kondisi2 + "<br>")
+        // && untuk dan
+        const orang1 = orang.alamat.negara || orang.umur
+        document.write(orang1)
+        let i = 1
+        // for(i = 1 ; i <= 10; i++)
+        for (; i < 10;) {
+            document.write(`<p>perulangan ke ${i}</p>`)
+            i++
+        }
+        for (let a = 1; a <= 100; a++) {
+            if (a % 2 === 0) {
+                continue
+            }
+            document.write(`angka ganjil = ${a},`)
+        }
+    </script>
+</body>
+
+</html>

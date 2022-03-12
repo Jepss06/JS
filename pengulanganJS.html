@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="coba">
+
+    </div>
+    <script>
+        const arr = ["a", "b", "c", "d"];
+        for (i = 0; i < arr.length; i++) {
+            document.getElementById("coba").innerHTML += arr[i] + "<br>";
+        }
+        for (var i = 0; i < 10; i++) {
+            document.write(i)
+        }
+        //for in untuk index, for of untuk elements
+        let a = 0
+        while (a < 10) {
+            a++
+            console.log(a)
+        }
+        try {
+            adlert("asda!");
+            //if () throw "error";
+        } catch (err) {
+            document.write(err.message);
+        }
+    </script>
+</body>
+
+</html>

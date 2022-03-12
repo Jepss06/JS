@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="coba"></p>
+    <script>
+        let json = '{"orang":[' +
+            '{"Nama_awal": "jeps", "Nama_akhir":"SS"},' +
+            '{"Nama_awal": "jeps1", "Nama_akhir":"SS1"},' +
+            '{"Nama_awal": "jeps2", "Nama_akhir":"SS2"}]}';
+        const obj = JSON.parse(json);
+        document.getElementById("coba").innerHTML = obj.orang[0].Nama_awal + "" + obj.orang[0].Nama_akhir;
+    </script>
+</body>
+
+</html>

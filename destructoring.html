@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      {
+        const names = ["jepi", "sutarlan", "saputra", "test1", "test2"];
+        // const firstname = names[0]
+        // const midlename = names[1]
+        // const lastname = names[2]
+
+        const [firstname, midlename, lastname, ...others] = names;
+
+        console.log(firstname);
+        console.log(midlename);
+        console.log(lastname);
+        console.log(others);
+      }
+      {
+        const person = {
+          firstname: "jeps",
+          lastname: "saputra",
+          address: {
+            jalan: "belum ada",
+            city: "bandung",
+            country: "indonesia",
+          },
+          hobby: "ngoding",
+          channel: "hello gaming",
+        };
+        const {
+          firstname,
+          lastname,
+          address: { country, city, jalan },
+          ...others
+        } = person;
+        console.log(firstname);
+        console.log(lastname);
+        console.log(city);
+        console.log(jalan);
+        console.log(country);
+        console.log(others);
+      }
+      function displayPerson({ firstname, midlename, lastname }) {
+        console.log(firstname);
+        console.log(midlename);
+        console.log(lastname);
+      }
+      const person1 = {
+        firstname: "jeps",
+        midlename: "sutarlan",
+        lastname: "saputra",
+      };
+      displayPerson(person1);
+      {
+        function sum([first, second] ) {
+          return first + second;
+        }
+        console.info(sum([1, 1]));
+        console.info(sum([100, 20]));
+      }
+    </script>
+  </body>
+</html>

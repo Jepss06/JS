@@ -1,0 +1,138 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>
+        <p id="coba"></p>
+    </h1>
+    <p id="coba1"></p><br>
+    <p id="coba2"></p><br>
+    <p id="coba3"></p><br>
+    <p id="coba4" style="display:none">test</p><br>
+    <p id="Test">...</p><br>
+    <p id="Test1">...1</p><br>
+    <p id="Test2">...2</p><br>
+    <p id="demo">...3</p><br>
+    <p id="demo1">...4</p><br>
+
+    <button onclick="document.getElementById('coba4').style.display='block'">click me!</button>
+    <button onclick="myfunction2()">click me1!</button>
+</body>
+<script>
+    //toString Convert to string
+    //.join untuk menggabungkan dengan symbol ataupun spasi atau dengan string lainnya setiap index
+    //.splice(2,0,"index1", "index2") angka 2 untuk menaruh index1 pada index pertama diikuti oleh index 2 pada angka0 
+    //.sort untuk mengurutkan array sesuai alpabet digabung dengan .reverse sehingga mengurut dari angka terbesar ke yang terkecil
+    //.sort(function(a,b){return a-b}) ASC, b-a DSC, karena a, alphabet sebelum b sehingga a adalah nilai terpendek
+    //.sort(function(a,b){return 0.5-math.random()}) untuk mencari array secara random 
+    //.math.max.apply(null,params) untuk mencari array terbesar, sedangkan .min untuk mencari array terkecil
+    //sesudah di foreach ke function, function memiliki params(value, index, array)
+    document.write("ini JS")
+    var title = document.getElementById("coba").innerHTML = "JS"
+    //menggabungkan 2 array atau lebih
+    const arr_conc = ["1", "2", "3"]
+    const arr_conc1 = ["4", "5", "6"]
+    const Tam = arr_conc.concat(arr_conc1)
+    //const Tam = arr_conc.concat(arr_conc1, arr_conc2)
+    document.write(Tam)
+    //cek berapa banyak index array
+    const Arr_A = ["tiga3", "empat4", "lima5"]
+    Arr_A[5] = "tujuh7";
+    let Alen = Arr_A.length;
+    let text5 = "";
+    for (let i = 0; i < Alen; i++) {
+        text5 += Arr_A[i] + ","
+    }
+    console.log(text5)
+    // mengganti isi array
+    const arr_f = ["7", "9", "10"]
+    let coba3 = document.getElementById("coba3")
+    coba3.innerHTML = arr_f.fill("coba", "1")
+    coba3.style.fontSize = "20px";
+    //.isArray untuk cek array sama seperti instanceof Array
+    const Arr_pop = ["tiga3", "empat4", "lima5"]
+    document.getElementById('Test1').innerHTML = Arr_pop
+    Arr_pop.pop()
+    document.getElementById('Test2').innerHTML = Arr_pop
+    //.pop menghapus index terakhir, .shift menghapus index awal
+    //.unshift mengembalikan index array
+    //.slice memisahkan index
+    //lopping
+    const Arr_loop = ["satu", "dua", "tiga"]
+    let length = Arr_loop.length,
+        text = "<ul>"
+    for (let i = 0; i < length; i++) {
+        text += "<li>" + Arr_loop[i] + "</li>"
+    }
+    text += "</ul>"
+    console.log(Arr_loop)
+    //array iteration
+    //.map membuat array baru dari peforma sebuah fungsi pada element array
+    const Arr_Fe = ["satu1", "dua2", "tiga3"]
+    let text1 = "<ul>"
+    Arr_Fe.forEach(myfunction)
+    text1 += "</ul>"
+    document.write(text1)
+
+    function myfunction(value) {
+        text1 += "<li>" + value + "</li>"
+    }
+    const Arr_P = ["dua2", "tiga3"]
+    let text2 = "<ul>"
+    Arr_P.forEach(myfunction2)
+    text2 += "</ul>"
+    document.write(text2)
+    document.getElementById('Test').innerHTML = text2
+
+    function myfunction2(value) {
+        text2 += "<li>" + value + "</li>"
+        Arr_P.push("empat4")
+        Arr_P[Arr_P.length] = "lima5"
+        document.getElementById('Test').innerHTML = Arr_P
+    }
+    const numb = [7, 77, 70, 177]
+    const coba = numb.filter(cariArray);
+    document.write(coba);
+
+    function cariArray(value, index, array) {
+        return value > 8
+    }
+    const numb1 = [77, 770, 700, 707]
+    const sum = numb1.reduce(cariArray1); //reduceRight diambil value dari awal
+    document.getElementById("demo").innerHTML = sum;
+
+    function cariArray1(total, value) {
+        return value + total; //value di ambi dari nilai paling belakang
+    }
+    // cek apakah angkanya lebih kecil atau lebih besar dari isi array
+    //sama seperti.some
+    const arr_ev = ["7", "9", "10"]
+    document.getElementById("coba2").innerHTML = arr_ev.every(cek)
+
+    function cek(cekk) {
+        return cekk > 4
+    }
+    //.indexOf("index") mencari posisi index pada array
+    //.find untuk mencari value pertama di atas kondisi
+    //.findIndex untuk mencari index dari value pertama di atas kondisi
+    //.from("ABCDE") output array A,B,C,D,E
+    const arr_K = ["1", "2", "3"]
+    const key = arr_K.keys();
+    let text3 = ""
+    for (let x of key) {
+        text3 += x + "<br>"
+    }
+    document.getElementById("demo1").innerHTML = text3;
+    // mengurutkan array
+    const arr_ent = ["1", "2", "3"]
+    const tam1 = arr_ent.entries()
+    for (let x of tam1) {
+        document.getElementById("coba1").innerHTML += x + "<br>";
+    }
+    //.includes untuk cek apakah index tersebut ada pada array atau tidak
+</script>
+
+</html>

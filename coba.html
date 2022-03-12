@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="coba.html">
+        <input id="coba">
+        <button onclick="myfunction()"> coba
+        </button>
+    </form>
+    <script>
+        function myfunction() {
+            let coba = document.getElementById("coba").value
+            try {
+                if (coba == "salah") throw "salah";
+            } catch (error) {
+                alert(error)
+            }
+        }
+    </script>
+</body>
+
+</html>

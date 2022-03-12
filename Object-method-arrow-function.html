@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        name: "jeps",
+        katakan: (name) => {
+          console.log(`Hello ${name}`);
+        },
+      };
+      person.katakan("coba");
+      const orang = {
+        firstname: "jeps",
+        midlename: "sutarlan",
+        lastname: "saputra",
+        get fullname() {
+          return `${this.firstname} ${this.midlename} ${this.lastname} `;
+        },
+        set fullname(value) {
+          let array = value.split(" ");
+          this.firstname = array[0];
+          this.lastname = array[2];
+          this.midlename = array[1];
+        },
+      };
+
+      orang.fullname = "jeps saputra 1";
+      console.log(orang);
+      orang.fullname = "jeps 2";
+      console.log(orang);
+      orang.fullname = "jeps 1";
+      console.log(orang);
+    </script>
+  </body>
+</html>
